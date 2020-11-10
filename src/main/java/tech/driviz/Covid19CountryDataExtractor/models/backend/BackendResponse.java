@@ -7,12 +7,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BackendResponse {
-	
+
 	@JsonProperty("Message")
-	String message;
-	
+	private String message;
+
 	@JsonProperty("Countries")
-	List<CountryData> countryDataList;
+	private List<CountryData> countryDataList;
 
 	public String getMessage() {
 		return message;
@@ -29,5 +29,10 @@ public class BackendResponse {
 	public void setCountryDataList(List<CountryData> countryDataList) {
 		this.countryDataList = countryDataList;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "BackendResponse [message=" + message + ", countryDataList=" + countryDataList + "]";
+	}
+
 }

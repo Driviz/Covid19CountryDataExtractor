@@ -8,13 +8,13 @@ public class CountryData {
 
 	@JsonProperty("Country")
 	private String country;
-	
+
 	@JsonProperty("TotalConfirmed")
 	private Long totalConfirmed;
-	
+
 	@JsonProperty("TotalRecovered")
 	private Long totalRecovered;
-	
+
 	@JsonProperty("TotalDeaths")
 	private Long totalDeaths;
 
@@ -49,5 +49,11 @@ public class CountryData {
 	public void setTotalDeaths(Long totalDeaths) {
 		this.totalDeaths = totalDeaths;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "CountryData [country=" + country + ", totalConfirmed=" + totalConfirmed + ", totalRecovered="
+				+ totalRecovered + ", totalDeaths=" + totalDeaths + "]";
+	}
+
 }
