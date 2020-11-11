@@ -25,7 +25,7 @@ public class ScheduledListener {
 		this.covidDataSavingService = covidDataSavingService;
 	}
 
-	@Scheduled(cron = "* * 0/6 * * ?")
+	@Scheduled(fixedRate = 120000)
 	public void listen() {
 		logger.info("intitiating extracting Data");
 		List<CountryCasesData> dataList = covidDataExtractorService.extractData();
